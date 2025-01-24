@@ -29,4 +29,5 @@ docker compose up -d
 ````
 
 # Teste
-Acesse a url de estatísticas na porta que fou configurada http://0.0.0.0:9090 com as credencias configuradas no "haproxy.cfg"
+Acesse a url de estatísticas na porta que foi configurada http://0.0.0.0:9090 com as credencias configuradas no "haproxy.cfg"
+Acesse as demais urls configuradas.
