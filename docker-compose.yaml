@@ -1,0 +1,19 @@
+services:
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    networks:
+      - dokernet
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9090:9090"
+    volumes:
+      - ../haproxy/conf:/usr/local/etc/haproxy:ro
+      - ../haproxy/pki/dhparm.pem:/usr/local/etc/haproxy/pki/dhparm.pem
+      - ../haproxy/pki/server.pem:/usr/local/etc/haproxy/pki/server.pem
+    restart: aways
+
+networks:
+  dokernet:
+    external: true
