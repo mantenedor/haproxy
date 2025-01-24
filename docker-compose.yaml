@@ -12,7 +12,7 @@ services:
       - ./haproxy/conf:/usr/local/etc/haproxy:ro
       #- ./haproxy/pki/dhparm.pem:/usr/local/etc/haproxy/pki/dhparm.pem
       - ./haproxy/pki/server.pem:/usr/local/etc/haproxy/pki/server.pem
-    restart: aways
+    restart: always
 
 networks:
   dokernet:
