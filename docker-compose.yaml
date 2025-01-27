@@ -3,17 +3,17 @@ services:
     image: haproxy:latest
     container_name: haproxy
     networks:
-      - dokernet
+      - dockernet
     ports:
       - "80:80"
       - "443:443"
       - "9090:9090"
     volumes:
       - ./conf/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-      - ./pki/dhparam.pem:/usr/local/etc/haproxy/pki/dhparam.pem
-      - ./pki/server.pem:/usr/local/etc/haproxy/pki/server.pem
+      - ./pki/:/usr/local/etc/haproxy/pki/
     restart: always
 
 networks:
-  dokernet:
+  dockernet:
     driver: bridge
+    external: true
