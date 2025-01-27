@@ -1,0 +1,3 @@
+/usr/local/etc/haproxy/pki/server.pem host1.dominio.com.br
+/usr/local/etc/haproxy/pki/server.pem host2.dominio.com.br
+/usr/local/etc/haproxy/pki/server.pem host3.dominio.com.br
