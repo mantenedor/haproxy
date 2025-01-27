@@ -9,12 +9,11 @@ services:
       - "443:443"
       - "9090:9090"
     volumes:
-      - ./haproxy/conf:/usr/local/etc/haproxy:ro
-      #- ./haproxy/pki/dhparm.pem:/usr/local/etc/haproxy/pki/dhparm.pem
-      - ./haproxy/pki/server.pem:/usr/local/etc/haproxy/pki/server.pem
+      - ./conf/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - ./pki/dhparam.pem:/usr/local/etc/haproxy/pki/dhparam.pem
+      - ./pki/server.pem:/usr/local/etc/haproxy/pki/server.pem
     restart: always
 
 networks:
   dokernet:
     driver: bridge
-    external: true
